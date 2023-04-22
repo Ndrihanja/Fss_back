@@ -36,9 +36,7 @@ const PORT = 5000;
 const IP_ADDRESS = "localhost";
 
 mongoose
-  .connect(
-    "mongodb+srv://root:root@cluster0.cnfgn4d.mongodb.net/Suivi_Dossier?retryWrites=true&w=majority"
-  )
+  .connect("suivi_dossier")
   .then(() => app.listen(PORT, IP_ADDRESS))
   .then(() => console.log("Connexion avec succès"))
   .catch((err) => console.log(err));
